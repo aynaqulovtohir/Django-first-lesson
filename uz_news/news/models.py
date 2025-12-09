@@ -14,7 +14,7 @@ class News(models.Model):
     created_at=models.DateTimeField(verbose_name="Yaratilgan vaqt",auto_now_add=True)
     updated_at=models.DateTimeField(auto_now=True,verbose_name="Yangilangan vaqt")
     photo=models.ImageField(upload_to='photos/',blank=True,null=True,verbose_name='Rasmlar')
-    is_published=models.BooleanField(default=True,verbose_name="Nashr etilganligi")
+    is_published=models.BooleanField(default=True,verbose_name="Nashr etilganlik")
     category=models.ForeignKey(Category,on_delete=models.CASCADE,verbose_name='Kategoria')
     
     def __str__(self):
